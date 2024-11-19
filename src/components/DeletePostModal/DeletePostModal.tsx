@@ -1,3 +1,4 @@
+import {Button} from "../Button/Button.tsx";
 import {ModalRadix} from "../ModalRadix/ModalRadix.tsx";
 
 type Props = {
@@ -10,9 +11,8 @@ export const DeletePostModal = ({ open, onClose }: Props) => {
 		<ModalRadix open={open} onClose={onClose} modalTitle={'Delete Post'}>
 			Are you sure you want to delete this post?
 			<div>
-				{/*Будем использовать обычные кнопки*/}
-				<button onClick={onClose}>Yes</button>
-				<button onClick={onClose}>No</button>
+				<Button onClick={onClose}>Yes</Button>
+				<Button variant={'outlined'} onClick={onClose}>No</Button>
 			</div>
 		</ModalRadix>
 	)
